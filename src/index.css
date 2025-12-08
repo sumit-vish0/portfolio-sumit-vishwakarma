@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 7%;
+    --foreground: 180 100% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 174 100% 45%;
+    --primary-foreground: 220 15% 7%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 180 100% 95%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 174 100% 45%;
+    --accent-foreground: 220 15% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 174 100% 45%;
+
+    --radius: 0.75rem;
+
+    --neon: 174 100% 45%;
+    --neon-glow: 0 0 20px hsl(174 100% 45% / 0.5), 0 0 40px hsl(174 100% 45% / 0.3);
+    --glass: 220 15% 12% / 0.8;
+    --glass-border: 220 15% 25%;
+
+    --sidebar-background: 220 15% 7%;
+    --sidebar-foreground: 180 100% 95%;
+    --sidebar-primary: 174 100% 45%;
+    --sidebar-primary-foreground: 220 15% 7%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 180 100% 95%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 174 100% 45%;
+  }
+
+  .dark {
+    --background: 220 15% 7%;
+    --foreground: 180 100% 95%;
+    --card: 220 15% 10%;
+    --card-foreground: 180 100% 95%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 180 100% 95%;
+    --primary: 174 100% 45%;
+    --primary-foreground: 220 15% 7%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 180 100% 95%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 174 100% 45%;
+    --accent-foreground: 220 15% 7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 174 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl;
+  }
+
+  .glass-card-glow {
+    @apply glass-card shadow-[0_0_30px_hsl(var(--neon)/0.15)] hover:shadow-[0_0_40px_hsl(var(--neon)/0.25)] transition-shadow duration-300;
+  }
+
+  .neon-text {
+    @apply text-primary;
+    text-shadow: 0 0 10px hsl(var(--neon) / 0.5), 0 0 20px hsl(var(--neon) / 0.3);
+  }
+
+  .neon-border {
+    @apply border-primary/50;
+    box-shadow: 0 0 15px hsl(var(--neon) / 0.3), inset 0 0 15px hsl(var(--neon) / 0.1);
+  }
+
+  .neon-glow {
+    box-shadow: var(--neon-glow);
+  }
+
+  .topographic-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M20,20 Q50,10 80,20 T80,80 Q50,90 20,80 T20,20' fill='none' stroke='%2300e5d4' stroke-width='0.3' opacity='0.1'/%3E%3Cpath d='M30,30 Q55,20 75,30 T75,70 Q55,80 30,70 T30,30' fill='none' stroke='%2300e5d4' stroke-width='0.3' opacity='0.08'/%3E%3Cpath d='M40,40 Q60,35 70,40 T70,60 Q60,65 40,60 T40,40' fill='none' stroke='%2300e5d4' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  .gradient-bg {
+    background: radial-gradient(ellipse at top, hsl(var(--neon) / 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, hsl(var(--neon) / 0.05) 0%, transparent 40%),
+                hsl(var(--background));
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--neon) / 0.3); }
+  50% { box-shadow: 0 0 35px hsl(var(--neon) / 0.5); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
