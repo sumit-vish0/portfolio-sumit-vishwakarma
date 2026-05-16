@@ -53,7 +53,7 @@ export const HeroSection = () => {
                 </div>
                 <div className="flex items-center gap-2 mt-1 text-muted-foreground text-xs">
                   <MapPin className="w-3 h-3" />
-                  <span>Indore, India</span>
+                  <span>Banglore, India</span>
                 </div>
                 <a
                   href="/Sumit_Vishwakarma_Resume.pdf"
@@ -82,7 +82,7 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-muted-foreground text-lg max-w-xl mb-8">
-              I build AI-powered full-stack applications using the MERN stack, Generative AI, and modern web technologies. Passionate about solving problems and creating seamless user experiences.
+              I build AI-powered full-stack applications using the Python Full stack, Generative AI, and modern web technologies. Passionate about solving problems and creating seamless user experiences.
             </p>
 
             {/* Stats */}

@@ -25,7 +25,7 @@ export const AboutSection = () => {
           <div className="glass-card-glow p-8 rounded-2xl neon-border">
             <h3 className="text-2xl font-bold text-primary mb-4 font-mono">Hello!</h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm <span className="text-primary">Sumit Vishwakarma</span>, a Full Stack Engineer from Indore, India. 
+              I'm <span className="text-primary">Sumit Vishwakarma</span>, a Full Stack Engineer from Banglore, India. 
               I specialize in building AI-powered web applications using the{" "}
               <span className="text-primary">Python Full Stack</span> (Python, DJango,REST API, Flask,  React.js, JavaSript).
             </p>

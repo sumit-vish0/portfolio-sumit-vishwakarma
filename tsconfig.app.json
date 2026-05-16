@@ -20,8 +20,12 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
+<<<<<<< HEAD
 
 
+=======
+    
+>>>>>>> 071e4260e73863b69034ce8e0bdc0b12403d4c1e
     "paths": {
       "@/*": ["./src/*"]
     }
