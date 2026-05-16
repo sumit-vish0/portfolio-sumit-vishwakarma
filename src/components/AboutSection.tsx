@@ -27,7 +27,7 @@ export const AboutSection = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               I'm <span className="text-primary">Sumit Vishwakarma</span>, a Full Stack Engineer from Indore, India. 
               I specialize in building AI-powered web applications using the{" "}
-              <span className="text-primary">MERN Stack</span> (MongoDB, Express.js, React.js, Node.js).
+              <span className="text-primary">Python Full Stack</span> (Python, DJango,REST API, Flask,  React.js, JavaSript).
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               I'm passionate about integrating <span className="text-primary">Generative AI</span> and{" "}
